@@ -1,0 +1,79 @@
+/* ==========================================================================
+   GLOBAL SETTINGS
+   ========================================================================== */
+
+
+/* 
+   TYPE SETTINGS
+   ========================================================================== */
+/**
+* Set the base font font size. Define in pixels; the library will convert
+* to the most appropriate unit (unitless).
+*/
+$base-font-size:                18px !default;
+$base-line-height:              24px !default;
+
+/**
+* Heading Sizes
+*/
+$h1-size:                       48px !default;
+$h2-size:                       36px !default;
+$h3-size:                       30px !default;
+$h4-size:                       24px !default;
+$h5-size:                       20px !default;
+$h6-size:                       18px !default;
+
+/**
+* Indented paragraphs.
+*/
+$indented-paragraphs:           false !default;
+
+/**
+* Show baseline grid? This is handy during development.
+*/
+$show-baseline:                 false !default;
+
+
+
+
+
+/* 
+   FRAMEWORK SETTINGS
+   ========================================================================== */
+/**
+* DO NOT MODIFY THESE VARIABLES. 
+* They are internal settings upon which the library depends.
+*/
+$base-spacing-unit:             $base-line-height;
+$base-spacing-ratio:            $base-line-height / $base-font-size;
+
+
+
+
+
+/* 
+   LAYOUT SETTINGS
+   ========================================================================== */
+/**
+* Set the spacing between grid items.
+*/
+$gutter:                $base-spacing-unit !default;
+
+
+/**
+* Set the breakpoints for the grid.
+*/
+$small-width:           "(max-width: 767px)";
+$medium-width:          "(min-width: 768px) and (max-width: 1023px)";
+$large-width:           "(min-width: 1024px)";
+
+
+
+
+
+/* 
+   BUTTON SETTINGS
+   ========================================================================== */
+$btn-border-width:    1px !default;
+$btn-border-style:    solid !default;
+$btn-radius:          0 !default;

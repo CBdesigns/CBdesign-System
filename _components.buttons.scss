@@ -1,0 +1,39 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+
+/**
+ * Extends `.btn` in _objects.buttons.scss.
+ */
+
+.btn {
+  background-color: $color-btn-background;
+  color: $color-btn-text;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($color-btn-background, 10%);
+    border-color: darken($color-btn-background, 10%);
+  }
+
+}
+
+
+
+
+
+.btn--secondary {
+  background: none;
+  color: $color-btn-background;
+  
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($color-btn-background, 10%);
+    border-color: darken($color-btn-background, 10%);
+    color: $color-btn-text;
+  }
+
+}

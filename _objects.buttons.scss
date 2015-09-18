@@ -1,0 +1,146 @@
+/* ==========================================================================
+BUTTONS
+========================================================================== */
+
+
+/**
+ * Extend `.btn` in _components.buttons.scss.
+ */
+
+
+/**
+ * Button Settings
+ */
+$btn-padding:         halve($base-spacing-unit) !default;
+$btn-padding--small:  halve($btn-padding) !default;
+$btn-padding--large:  double($btn-padding) !default;
+
+$enable-btn--small:   false !default;
+$enable-btn--large:   false !default;
+$enable-btn--full:    false !default;
+$enable-btn--pill:    false !default;
+
+
+
+
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ */
+.btn,
+%btn {
+	display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  border: none; /* [4] */
+  margin:  0; /* [4] */
+  cursor: pointer; /* [5] */
+	overflow: visible; /* [6] */
+	padding: $btn-padding - $btn-border-width  double($btn-padding) - $btn-border-width; /* [7] */
+
+	@if($btn-border-width != 0) {
+		border: $btn-border-width $btn-border-style $color-btn-border;
+	} 
+	@else {
+		border: none; /* [4] */
+	}
+
+	@if($btn-radius != 0) {
+		border-radius: $btn-radius;
+	}
+
+
+	&,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+  }
+
+  /**
+   * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+   */
+  &::-moz-focus-inner {
+    border:  0;
+    padding: 0;
+  }
+}
+
+
+
+
+/**
+ * Small buttons.
+ */
+@if ($enable-btn--small == true) {
+
+    .btn--small,
+    %btn--small {
+        padding: $btn-padding--small - $btn-border-width  double($btn-padding--small) - $btn-border-width; /* [7] */
+    }
+
+}
+
+
+/**
+ * Large buttons.
+ */
+@if ($enable-btn--large == true) {
+
+    .btn--large,
+    %btn--large {
+        padding: $btn-padding--large - $btn-border-width  double($btn-padding--large) - $btn-border-width; /* [7] */
+    }
+
+}
+
+
+
+
+
+/**
+ * Full-width buttons.
+ */
+@if ($enable-btn--full == true) {
+
+    .btn--full,
+    %btn--full {
+        width: 100%;
+
+        @if $global-border-box == false {
+            /**
+             * Remove paddings so that widths and paddings don’t conflict.
+             */
+            padding-right: 0;
+            padding-left:  0;
+        }
+
+    }
+
+}
+
+
+
+
+
+/**
+ * Round-ended buttons.
+ *
+ * 1. Overly-large value to ensure the radius rounds the whole end of the
+ *    button.
+ */
+@if ($enable-btn--pill == true) {
+
+    .btn--pill,
+    %btn--pill {
+        border-radius: 100px; /* [1] */
+    }
+
+}

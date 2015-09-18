@@ -1,0 +1,67 @@
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+
+/**
+ * 1. Allow for use on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ * 4. Hack so columns correctly stack side-by-side.
+ */
+.layout {
+  list-style: none;           /* [1] */
+  margin: 0;                  /* [2] */
+  padding: 0;                 /* [2] */
+  margin-left: -$gutter;      /* [3] */
+  letter-spacing: -0.31em;    /* [4] */
+}
+
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Resets the 'letter-spacing' set on grid element.
+ */
+.layout__item {
+  display: inline-block;      /* [1] */
+  padding-left: $gutter;      /* [2] */
+  vertical-align: top;        /* [3] */
+  width: 100%;                /* [4] */
+  letter-spacing: normal;     /* [5] */
+  word-spacing: normal;       /* [5] */
+} 
+
+
+/**
+ * Align layout items vertically (`.layout--middle` or `.layout--bottom`).
+ * Extends `.layout`.
+ */
+.layout--middle {
+  
+  > .layout__item {
+    vertical-align: middle
+  }
+}
+
+.layout--bottom {
+    
+  > .layout__item {
+    vertical-align: bottom
+  }
+}
+
+
+/**
+ * Align layout items centrally without needing to use push or pull
+ * classes. Extends `.layout`.
+ */
+.layout--center { 
+  text-align:center;
+
+  > .layout__item {
+    text-align:left;
+  }
+}

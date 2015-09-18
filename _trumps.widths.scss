@@ -1,0 +1,139 @@
+/* ==========================================================================
+   WIDTHS
+   ========================================================================== */
+
+
+/**
+ * Halves
+ */
+.one-half          { width:50%; }
+
+
+/**
+ * Thirds
+ */
+.one-third         { width:33.333%; }
+.two-thirds        { width:66.666%; }
+
+
+/**
+ * Quarters
+ */
+.one-quarter       { width:25%; }
+.three-quarters    { width:75%; }
+
+
+/**
+ * Fifths
+ */
+.one-fifth         { width:20%; }
+.two-fifths        { width:40%; }
+.three-fifths      { width:60%; }
+.four-fifths       { width:80%; }
+
+
+/**
+ * Sixths
+ */
+.one-sixth         { width:16.666%; }
+.five-sixths       { width:83.333%; }
+
+
+
+/**
+ * Medium Grid
+ */
+@media #{$medium-width} {
+  
+
+  /**
+   * Whole
+   */
+   .whole\@md            { width: 100%; }
+
+
+  /**
+   * Halves
+   */
+  .one-half\@md          { width:50%; }
+
+
+  /**
+   * Thirds
+   */
+  .one-third\@md         { width:33.333%; }
+  .two-thirds\@md        { width:66.666%; }
+
+
+  /**
+   * Quarters
+   */
+  .one-quarter\@md       { width:25%; }
+  .three-quarters\@md    { width:75%; }
+
+
+  /**
+   * Fifths
+   */
+  .one-fifth\@md         { width:20%; }
+  .two-fifths\@md        { width:40%; }
+  .three-fifths\@md      { width:60%; }
+  .four-fifths\@md       { width:80%; }
+
+
+  /**
+   * Sixths
+   */
+  .one-sixth\@md         { width:16.666%; }
+  .five-sixths\@md       { width:83.333%; }
+
+}
+
+
+/**
+ * Small Grid
+ */
+@media #{$small-width} {
+
+  /**
+   * Whole
+   */
+   .whole\@sm            { width: 100%; }
+  
+
+  /**
+   * Halves
+   */
+  .one-half\@sm          { width:50%; }
+
+
+  /**
+   * Thirds
+   */
+  .one-third\@sm         { width:33.333%; }
+  .two-thirds\@sm        { width:66.666%; }
+
+
+  /**
+   * Quarters
+   */
+  .one-quarter\@sm       { width:25%; }
+  .three-quarters\@sm    { width:75%; }
+
+
+  /**
+   * Fifths
+   */
+  .one-fifth\@sm         { width:20%; }
+  .two-fifths\@sm        { width:40%; }
+  .three-fifths\@sm      { width:60%; }
+  .four-fifths\@sm       { width:80%; }
+
+
+  /**
+   * Sixths
+   */
+  .one-sixth\@sm         { width:16.666%; }
+  .five-sixths\@sm       { width:83.333%; }
+
+}
