@@ -1,8 +1,4 @@
 {
     "name": "180StartKit",
-    "version": "0.0.1",
-    "ignore": [
-        "bower.json",
-        "README.md"
-    ]
+    "version": "0.0.1"
 }
